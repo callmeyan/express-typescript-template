@@ -8,6 +8,8 @@ export type HttpMethod = 'all' | 'get' | 'post' | 'put' | 'delete' | 'patch' | '
 export type RouteHandleFunctionParam = {
     path: string;
     param: Record<string, string>;
+    query: Record<string, string>;
+    body: Record<string, string>;
     method: HttpMethod;
     headers: Record<string, string>;
     res: Response<any, Record<string, any>>

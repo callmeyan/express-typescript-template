@@ -1,17 +1,20 @@
 {
   "name": "app-report",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "nodemon src/index.ts",
     "start": "ts-node src/index.ts",
     "test": "mocha -r ts-node/register test/**/**.test.ts",
+    "test-db": "mocha -r ts-node/register test/db.test.ts",
     "build": "tsc"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/mocha": "^10.0.1",
+    "@types/mysql": "^2.15.21",
     "@types/node": "^20.4.9",
     "@types/supertest": "^2.0.12",
     "mocha": "^10.2.0",
@@ -20,7 +23,13 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "mysql": "^2.18.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
+  },
+  "homepage": "https://github.com/callmeyan/express-typescript-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callmeyan/express-typescript-template"
   }
 }
